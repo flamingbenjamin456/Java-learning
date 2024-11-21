@@ -1,0 +1,23 @@
+public class ReverseArray {
+
+    public static int[] reverseArray(int[] arr) {
+        int[] reversed = new int[arr.length];  // Create a new array to hold the reversed elements
+        
+        // Loop through the original array in reverse order and fill the new array
+        for (int i = 0; i < arr.length; i++) {
+            reversed[i] = arr[arr.length - 1 - i];
+        }
+        
+        return reversed;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int[] reversedArr = reverseArray(arr);
+
+        // Printing the reversed array
+        for (int num : reversedArr) {
+            System.out.print(num + " ");  // Output: 5 4 3 2 1 
+        }
+    }
+}
