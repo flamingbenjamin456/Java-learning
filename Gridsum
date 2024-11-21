@@ -1,0 +1,27 @@
+public class GridSum {
+    public static double sumGrid(double[][] grid) {
+        double totalSum = 0.0;  // Initialize a variable to store the sum of all elements
+
+        // Loop through each row in the grid
+        for (int i = 0; i < grid.length; i++) {
+            // Loop through each element in the current row
+            for (int j = 0; j < grid[i].length; j++) {
+                totalSum += grid[i][j];  // Add the current element to the total sum
+            }
+        }
+
+        return totalSum;  // Return the total sum after all elements have been added
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        double[][] grid = {
+            {1.0, 2.0, 3.0},
+            {4.0, 5.0, 6.0},
+            {7.0, 8.0, 9.0}
+        };
+
+        double result = sumGrid(grid);
+        System.out.println("The sum of all elements in the grid is: " + result);  // Should print 45.0
+    }
+}
